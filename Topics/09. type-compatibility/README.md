@@ -25,7 +25,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -65,7 +65,7 @@ p = new Person();
 
 <!-- section start -->
 <!-- attr: { id:'starting-out', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Starting out
+<!-- # Starting out -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -107,7 +107,7 @@ greet(y); // OK
 
 <!-- section start -->
 <!-- attr: { id:'comparing-two-functions', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Comparing two functions
+<!-- # Comparing two functions -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -275,7 +275,7 @@ invokeLater([1, 2], (x?, y?) =&gt; console.log(x + ", " + y));
 
 <!-- section start -->
 <!-- attr: { id:'enums', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Enums
+<!-- # Enums -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -297,7 +297,7 @@ status = Color.Green;  //error
 
 <!-- section start -->
 <!-- attr: { id:'classes', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Classes
+<!-- # Classes -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -354,7 +354,7 @@ s = a;  //OK
 
 <!-- section start -->
 <!-- attr: { id:'generics', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Generics
+<!-- # Generics -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -415,7 +415,7 @@ identity = reverse;  // Okay because (x: any)=&gt;any matches (y: any)=&gt;any
 
 <!-- section start -->
 <!-- attr: { id:'advanced-topics', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Advanced Topics
+<!-- # Advanced Topics -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

@@ -25,7 +25,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -38,7 +38,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'basic-concepts', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Basic Concepts
+<!-- # Basic Concepts -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -56,7 +56,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'merging-interfaces', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Interfaces
+<!-- # Merging Interfaces -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -167,7 +167,7 @@ interface Document {
 
 <!-- section start -->
 <!-- attr: { id:'merging-namespaces', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Namespaces
+<!-- # Merging Namespaces -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -240,7 +240,7 @@ namespace Animal {
 
 <!-- section start -->
 <!-- attr: { id:'merging-namespaces-with-classes,-functions,-and-enums', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Namespaces with Classes, Functions, and Enums
+<!-- # Merging Namespaces with Classes, Functions, and Enums -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -322,7 +322,7 @@ namespace Color {
 
 <!-- section start -->
 <!-- attr: { id:'disallowed-merges', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Disallowed Merges
+<!-- # Disallowed Merges -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -334,7 +334,7 @@ namespace Color {
 
 <!-- section start -->
 <!-- attr: { id:'module-augmentation', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Module Augmentation
+<!-- # Module Augmentation -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

@@ -26,7 +26,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -38,7 +38,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'classes', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Classes
+<!-- # Classes -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -73,7 +73,7 @@ let greeter = new Greeter("world");
 
 <!-- section start -->
 <!-- attr: { id:'inheritance', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Inheritance
+<!-- # Inheritance -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -144,7 +144,7 @@ Tommy the Palomino moved 34m.
 
 <!-- section start -->
 <!-- attr: { id:'public,-private,-and-protected-modifiers', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Public, private, and protected modifiers
+<!-- # Public, private, and protected modifiers -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -311,7 +311,7 @@ class Animal {
 
 <!-- section start -->
 <!-- attr: { id:'accessors', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Accessors
+<!-- # Accessors -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -383,7 +383,7 @@ if (employee.fullName) {
 
 <!-- section start -->
 <!-- attr: { id:'static-properties', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Static Properties
+<!-- # Static Properties -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -419,7 +419,7 @@ console.log(grid2.calculateDistanceFromOrigin({x: 10, y: 10}));
 
 <!-- section start -->
 <!-- attr: { id:'abstract-classes', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Abstract Classes
+<!-- # Abstract Classes -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -489,7 +489,7 @@ department.generateReports(); // error: method doesn't exist on declared abstrac
 
 <!-- section start -->
 <!-- attr: { id:'advanced-techniques', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Advanced Techniques
+<!-- # Advanced Techniques -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

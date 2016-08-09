@@ -22,7 +22,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -34,7 +34,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'basics', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Basics
+<!-- # Basics -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -58,7 +58,7 @@ let x = 3;
 
 <!-- section start -->
 <!-- attr: { id:'best-common-type', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Best common type
+<!-- # Best common type -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -100,7 +100,7 @@ let zoo: Animal[] = [new Rhino(), new Elephant(), new Snake()];
 
 <!-- section start -->
 <!-- attr: { id:'contextual-type', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Contextual Type
+<!-- # Contextual Type -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

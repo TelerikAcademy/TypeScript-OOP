@@ -20,7 +20,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -57,7 +57,7 @@ tsc --target ES5 --experimentalDecorators
 
 <!-- section start -->
 <!-- attr: { id:'decorators', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Decorators
+<!-- # Decorators -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

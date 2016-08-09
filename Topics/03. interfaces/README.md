@@ -32,7 +32,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -44,7 +44,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'our-first-interface', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Our First Interface
+<!-- # Our First Interface -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -98,7 +98,7 @@ printLabel(myObj);
 
 <!-- section start -->
 <!-- attr: { id:'optional-properties', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Optional Properties
+<!-- # Optional Properties -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -166,7 +166,7 @@ let mySquare = createSquare({color: "black"});
 
 <!-- section start -->
 <!-- attr: { id:'excess-property-checks', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Excess Property Checks
+<!-- # Excess Property Checks -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -252,7 +252,7 @@ let mySquare = createSquare(squareOptions);
 
 <!-- section start -->
 <!-- attr: { id:'function-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Function Types
+<!-- # Function Types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -337,7 +337,7 @@ mySearch = function(src, sub) {
 
 <!-- section start -->
 <!-- attr: { id:'indexable-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Indexable Types
+<!-- # Indexable Types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -404,7 +404,7 @@ interface NumberDictionary {
 
 <!-- section start -->
 <!-- attr: { id:'class-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Class Types
+<!-- # Class Types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -527,7 +527,7 @@ let analog = createClock(AnalogClock, 7, 32);
 
 <!-- section start -->
 <!-- attr: { id:'extending-interfaces', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Extending Interfaces
+<!-- # Extending Interfaces -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -581,7 +581,7 @@ square.penWidth = 5.0;
 
 <!-- section start -->
 <!-- attr: { id:'hybrid-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Hybrid Types
+<!-- # Hybrid Types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -625,7 +625,7 @@ c.interval = 5.0;
 
 <!-- section start -->
 <!-- attr: { id:'interfaces-extending-classes', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Interfaces Extending Classes
+<!-- # Interfaces Extending Classes -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

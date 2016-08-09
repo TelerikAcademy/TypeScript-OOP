@@ -20,7 +20,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -84,7 +84,7 @@ let className = c[getClassNameSymbol](); // "C"
 
 <!-- section start -->
 <!-- attr: { id:'well-known-symbols', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Well-known Symbols
+<!-- # Well-known Symbols -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

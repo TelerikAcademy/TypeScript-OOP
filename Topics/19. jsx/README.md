@@ -25,7 +25,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -37,7 +37,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'basic-usage', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Basic usage
+<!-- # Basic usage -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -58,7 +58,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'the-as-operator', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# The as operator
+<!-- # The as operator -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -89,7 +89,7 @@ var foo = bar as foo;
 
 <!-- section start -->
 <!-- attr: { id:'type-checking', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -344,7 +344,7 @@ var badProps = {};
 
 <!-- section start -->
 <!-- attr: { id:'the-jsx-result-type', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# The JSX result type
+<!-- # The JSX result type -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -356,7 +356,7 @@ var badProps = {};
 
 <!-- section start -->
 <!-- attr: { id:'embedding-expressions', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Embedding Expressions
+<!-- # Embedding Expressions -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -385,7 +385,7 @@ var a = &lt;div&gt;
 
 <!-- section start -->
 <!-- attr: { id:'react-integration', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# React integration
+<!-- # React integration -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

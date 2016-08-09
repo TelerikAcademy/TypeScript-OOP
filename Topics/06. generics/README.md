@@ -24,7 +24,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -37,7 +37,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'hello-world-of-generics', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Hello World of Generics
+<!-- # Hello World of Generics -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -115,7 +115,7 @@ let output = identity("myString");  // type of output will be 'string'
 
 <!-- section start -->
 <!-- attr: { id:'working-with-generic-type-variables', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Generic Type Variables
+<!-- # Working with Generic Type Variables -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -185,7 +185,7 @@ function loggingIdentity&lt;T&gt;(arg: Array&lt;T&gt;): Array&lt;T&gt; {
 
 <!-- section start -->
 <!-- attr: { id:'generic-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Types
+<!-- # Generic Types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -282,7 +282,7 @@ let myIdentity: GenericIdentityFn&lt;number&gt; = identity;
 
 <!-- section start -->
 <!-- attr: { id:'generic-classes', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Classes
+<!-- # Generic Classes -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -328,7 +328,7 @@ alert(stringNumeric.add(stringNumeric.zeroValue, "test"));
 
 <!-- section start -->
 <!-- attr: { id:'generic-constraints', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Constraints
+<!-- # Generic Constraints -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

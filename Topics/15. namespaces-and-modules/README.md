@@ -22,7 +22,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -35,7 +35,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'using-namespaces', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Using Namespaces
+<!-- # Using Namespaces -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -48,7 +48,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'using-modules', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Using Modules
+<!-- # Using Modules -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -67,7 +67,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'pitfalls-of-namespaces-and-modules', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Pitfalls of Namespaces and Modules
+<!-- # Pitfalls of Namespaces and Modules -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

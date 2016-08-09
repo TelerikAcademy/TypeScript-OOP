@@ -24,7 +24,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'variable-declarations', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Variable Declarations
+<!-- # Variable Declarations -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -42,7 +42,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'var-declarations', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# var declarations
+<!-- # var declarations -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -256,7 +256,7 @@ for (var i = 0; i &lt; 10; i++) {
 
 <!-- section start -->
 <!-- attr: { id:'let-declarations', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -502,7 +502,7 @@ for (let i = 0; i &lt; 10 ; i++) {
 
 <!-- section start -->
 <!-- attr: { id:'const-declarations', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# const declarations
+<!-- # const declarations -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -549,7 +549,7 @@ kitty.numLives--;
 
 <!-- section start -->
 <!-- attr: { id:'let-vs.-const', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# let vs. const
+<!-- # let vs. const -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -568,7 +568,7 @@ kitty.numLives--;
 
 <!-- section start -->
 <!-- attr: { id:'destructuring', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Destructuring
+<!-- # Destructuring -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

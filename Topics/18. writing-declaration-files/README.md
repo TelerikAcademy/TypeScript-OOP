@@ -21,7 +21,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -33,7 +33,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'guidelines-and-specifics', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Guidelines and Specifics
+<!-- # Guidelines and Specifics -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -155,7 +155,7 @@ declare var A: A_Static;
 
 <!-- section start -->
 <!-- attr: { id:'examples', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Examples
+<!-- # Examples -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

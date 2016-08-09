@@ -32,7 +32,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -56,7 +56,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'export', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Export
+<!-- # Export -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -172,7 +172,7 @@ export * from "./ZipCodeValidator";  // exports class 'ZipCodeValidator'
 
 <!-- section start -->
 <!-- attr: { id:'import', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Import
+<!-- # Import -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -237,7 +237,7 @@ import "./my-module.js";
 
 <!-- section start -->
 <!-- attr: { id:'default-exports', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Default exports
+<!-- # Default exports -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -374,7 +374,7 @@ console.log(num); // "123"
 
 <!-- section start -->
 <!-- attr: { id:'export-=-and-import-=-require()', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-
+<!--  -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -439,7 +439,7 @@ strings.forEach(s =&gt; {
 
 <!-- section start -->
 <!-- attr: { id:'code-generation-for-modules', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Code Generation for Modules
+<!-- # Code Generation for Modules -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -588,7 +588,7 @@ export var t = something + 1;
 
 <!-- section start -->
 <!-- attr: { id:'simple-example', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Simple Example
+<!-- # Simple Example -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -712,7 +712,7 @@ strings.forEach(s =&gt; {
 
 <!-- section start -->
 <!-- attr: { id:'optional-module-loading-and-other-advanced-loading-scenarios', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Optional Module Loading and Other Advanced Loading Scenarios
+<!-- # Optional Module Loading and Other Advanced Loading Scenarios -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -817,7 +817,7 @@ if (needZipValidation) {
 
 <!-- section start -->
 <!-- attr: { id:'working-with-other-javascript-libraries', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Other JavaScript Libraries
+<!-- # Working with Other JavaScript Libraries -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -870,7 +870,7 @@ let myUrl = URL.parse("http://www.typescriptlang.org");
 
 <!-- section start -->
 <!-- attr: { id:'guidance-for-structuring-modules', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

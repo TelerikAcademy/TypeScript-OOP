@@ -24,7 +24,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -36,7 +36,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'first-steps', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# First steps
+<!-- # First steps -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -88,7 +88,7 @@ for (let s of strings) {
 
 <!-- section start -->
 <!-- attr: { id:'namespacing', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Namespacing
+<!-- # Namespacing -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -146,7 +146,7 @@ for (let s of strings) {
 
 <!-- section start -->
 <!-- attr: { id:'splitting-across-files', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Splitting Across Files
+<!-- # Splitting Across Files -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -306,7 +306,7 @@ tsc --outFile sample.js Validation.ts LettersOnlyValidator.ts ZipCodeValidator.t
 
 <!-- section start -->
 <!-- attr: { id:'aliases', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Aliases
+<!-- # Aliases -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -337,7 +337,7 @@ let sq = new polygons.Square(); // Same as 'new Shapes.Polygons.Square()'
 
 <!-- section start -->
 <!-- attr: { id:'working-with-other-javascript-libraries', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Other JavaScript Libraries
+<!-- # Working with Other JavaScript Libraries -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

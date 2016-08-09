@@ -24,7 +24,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'union-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Union Types
+<!-- # Union Types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -122,7 +122,7 @@ pet.swim();    // errors
 
 <!-- section start -->
 <!-- attr: { id:'type-guards-and-differentiating-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Type Guards and Differentiating Types
+<!-- # Type Guards and Differentiating Types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -321,7 +321,7 @@ if (padder instanceof StringPadder) {
 
 <!-- section start -->
 <!-- attr: { id:'intersection-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Intersection Types
+<!-- # Intersection Types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -369,7 +369,7 @@ jim.log();
 
 <!-- section start -->
 <!-- attr: { id:'type-aliases', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Type Aliases
+<!-- # Type Aliases -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -465,7 +465,7 @@ type Yikes = Array&lt;Yikes&gt;; // error
 
 <!-- section start -->
 <!-- attr: { id:'string-literal-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# String Literal Types
+<!-- # String Literal Types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -524,7 +524,7 @@ function createElement(tagName: string): Element {
 
 <!-- section start -->
 <!-- attr: { id:'polymorphic-this-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Polymorphic this types
+<!-- # Polymorphic this types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

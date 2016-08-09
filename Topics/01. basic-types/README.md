@@ -33,7 +33,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -45,7 +45,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'boolean', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Boolean
+<!-- # Boolean -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -63,7 +63,7 @@ let isDone: boolean = false;
 
 <!-- section start -->
 <!-- attr: { id:'number', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Number
+<!-- # Number -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -84,7 +84,7 @@ let octal: number = 0o744;
 
 <!-- section start -->
 <!-- attr: { id:'string', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# String
+<!-- # String -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -130,7 +130,7 @@ let sentence: string = "Hello, my name is " + fullName + ".\n\n" +
 
 <!-- section start -->
 <!-- attr: { id:'array', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Array
+<!-- # Array -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -155,7 +155,7 @@ let list: Array&lt;number&gt; = [1, 2, 3];
 
 <!-- section start -->
 <!-- attr: { id:'tuple', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Tuple
+<!-- # Tuple -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -206,7 +206,7 @@ x[6] = true; // Error, 'boolean' isn't 'string | number'
 
 <!-- section start -->
 <!-- attr: { id:'enum', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Enum
+<!-- # Enum -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -259,7 +259,7 @@ alert(colorName);
 
 <!-- section start -->
 <!-- attr: { id:'any', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Any
+<!-- # Any -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -312,7 +312,7 @@ list[1] = 100;
 
 <!-- section start -->
 <!-- attr: { id:'void', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Void
+<!-- # Void -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -339,7 +339,7 @@ let unusable: void = undefined;
 
 <!-- section start -->
 <!-- attr: { id:'type-assertions', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Type assertions
+<!-- # Type assertions -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -375,7 +375,7 @@ let strLength: number = (someValue as string).length;
 
 <!-- section start -->
 <!-- attr: { id:'a-note-about-let', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# A note about let
+<!-- # A note about let -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

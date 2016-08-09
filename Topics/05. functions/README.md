@@ -25,7 +25,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -37,7 +37,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'functions', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Functions
+<!-- # Functions -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -81,7 +81,7 @@ function addToZ(x, y) {
 
 <!-- section start -->
 <!-- attr: { id:'function-types', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Function Types
+<!-- # Function Types -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -164,7 +164,7 @@ let myAdd: (baseValue:number, increment:number) =&gt; number =
 
 <!-- section start -->
 <!-- attr: { id:'optional-and-default-parameters', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Optional and Default Parameters
+<!-- # Optional and Default Parameters -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -280,7 +280,7 @@ let result4 = buildName(undefined, "Adams");     // okay and returns "Will Adams
 
 <!-- section start -->
 <!-- attr: { id:'rest-parameters', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Rest Parameters
+<!-- # Rest Parameters -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -323,7 +323,7 @@ let buildNameFun: (fname: string, ...rest: string[]) =&gt; string = buildName;
 
 <!-- section start -->
 <!-- attr: { id:'lambdas-and-using-this', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Lambdas and using this
+<!-- # Lambdas and using this -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -406,7 +406,7 @@ alert("card: " + pickedCard.card + " of " + pickedCard.suit);
 
 <!-- section start -->
 <!-- attr: { id:'overloads', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Overloads
+<!-- # Overloads -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

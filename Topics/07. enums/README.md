@@ -20,7 +20,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'enums', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Enums
+<!-- # Enums -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -134,7 +134,7 @@ var directions = [0 /* Up */, 1 /* Down */, 2 /* Left */, 3 /* Right */];
 
 <!-- section start -->
 <!-- attr: { id:'ambient-enums', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Ambient enums
+<!-- # Ambient enums -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->

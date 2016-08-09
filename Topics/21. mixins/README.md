@@ -21,7 +21,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'introduction', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -33,7 +33,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'mixin-sample', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Mixin sample
+<!-- # Mixin sample -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -103,7 +103,7 @@ function applyMixins(derivedCtor: any, baseCtors: any[]) {
 
 <!-- section start -->
 <!-- attr: { id:'understanding-the-sample', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Understanding the sample
+<!-- # Understanding the sample -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
