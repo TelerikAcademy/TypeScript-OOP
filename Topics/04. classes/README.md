@@ -14,6 +14,7 @@
 - [Classes](#classes)
 - [Inheritance](#inheritance)
 - [Public, private, and protected modifiers](#public,-private,-and-protected-modifiers)
+- [Readonly modifier](#readonly-modifier)
 - [Accessors](#accessors)
 - [Static Properties](#static-properties)
 - [Abstract Classes](#abstract-classes)
@@ -64,7 +65,7 @@ let greeter = new Greeter("world");
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Classes
+<!-- # Classes -->
 - You’ll notice that in the class when we refer to one of the members of the class we prepend this.. This denotes that it’s a member access.
 - In the last line we construct an instance of the Greeter class using new. This calls into the constructor we defined earlier, creating a new object with the Greeter shape, and running the constructor to initialize it.
 
@@ -117,18 +118,18 @@ tom.move(34);
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Inheritance
+<!-- # Inheritance -->
 - This example covers quite a few of the inheritance features in TypeScript that are common to other languages. Here we see the extends keywords used to create a subclass. You can see this where Horse and Snake subclass the base class Animal and gain access to its features.
 - Derived classes that contain constructor functions must call super() which will execute the constructor function on the base class.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Inheritance
+<!-- # Inheritance -->
 - The example also shows how to override methods in the base class with methods that are specialized for the subclass. Here both Snake and Horse create a move method that overrides the move from Animal, giving it functionality specific to each class. Note that even though tom is declared as an Animal, since its value is a Horse, when tom.move(34) calls the overriding method in Horse:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Inheritance
+<!-- # Inheritance -->
 
 ```javascript
 Slithering...
@@ -162,7 +163,7 @@ Tommy the Palomino moved 34m.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Public, private, and protected modifiers
+<!-- # Public, private, and protected modifiers -->
 - You may still mark a member public explicitly. We could have written the Animal class from the previous section in the following way:
 
 ```javascript
@@ -179,7 +180,7 @@ class Animal {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Public, private, and protected modifiers
+<!-- # Public, private, and protected modifiers -->
 
 ```javascript
 class Animal {
@@ -208,13 +209,13 @@ new Animal("Cat").name; // Error: 'name' is private;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Public, private, and protected modifiers
+<!-- # Public, private, and protected modifiers -->
 - However, when comparing types that have private and protected members, we treat these types differently. For two types to be considered compatible, if one of them has a private member, then the other must have a private member that originated in the same declaration. The same applies to protected members.
 - Let’s look at an example to better see how this plays out in practice:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Public, private, and protected modifiers
+<!-- # Public, private, and protected modifiers -->
 
 ```javascript
 class Animal {
@@ -243,12 +244,12 @@ animal = employee; // Error: 'Animal' and 'Employee' are not compatible
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Public, private, and protected modifiers
+<!-- # Public, private, and protected modifiers -->
 - In this example, we have an Animal and a Rhino, with Rhino being a subclass of Animal. We also have a new class Employee that looks identical to Animal in terms of shape. We create some instances of these classes and then try to assign them to each other to see what will happen. Because Animal and Rhino share the private side of their shape from the same declaration of private name: string in Animal, they are compatible. However, this is not the case for Employee. When we try to assign from an Employee to Animal we get an error that these types are not compatible. Even though Employee also has a private member called name, it’s not the one we declared in Animal.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Public, private, and protected modifiers
+<!-- # Public, private, and protected modifiers -->
 - In this example, we have an Animal and a Rhino, with Rhino being a subclass of Animal. We also have a new class Employee that looks identical to Animal in terms of shape. We create some instances of these classes and then try to assign them to each other to see what will happen. Because Animal and Rhino share the private side of their shape from the same declaration of private name: string in Animal, they are compatible. However, this is not the case for Employee. When we try to assign from an Employee to Animal we get an error that these types are not compatible. Even though Employee also has a private member called name, it’s not the one we declared in Animal.
 - The protected modifier acts much like the private modifier with the exception that members declared protected can also be accessed by instances of deriving classes. For example,
 
@@ -280,31 +281,96 @@ console.log(howard.name); // error
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Public, private, and protected modifiers
+<!-- # Public, private, and protected modifiers -->
 - Notice that while we can’t use name from outside of Person, we can still use it from within an instance method of Employee because Employee derives from Person.
-- Notice that while we can’t use name from outside of Person, we can still use it from within an instance method of Employee because Employee derives from Person.
-- In our last example, we had to declare a private member name and a constructor parameter theName, and we then immediately set name to theName. This turns out to be a very common practice. Parameter properties let you create and initialize a member in one place. Here’s a further revision of the previous Animal class using a parameter property:
+- A constructor may also be marked protected. This means that the class cannot be instantiated outside of its containing class, but can be extended. For example,
+
+```javascript
+class Person {
+    protected name: string;
+    protected constructor(theName: string) { this.name = theName; }
+}
+
+// Employee can extend Person
+class Employee extends Person {
+    private department: string;
+
+    constructor(name: string, department: string) {
+        super(name);
+        this.department = department;
+    }
+
+    public getElevatorPitch() {
+        return `Hello, my name is ${this.name} and I work in ${this.department}.`;
+    }
+}
+
+let howard = new Employee("Howard", "Sales");
+let john = new Person("John"); // Error: The 'Person' constructor is protected
+
+```
+
+
+
+
+
+<!-- section start -->
+<!-- attr: { id:'readonly-modifier', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Readonly modifier -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Public, private, and protected modifiers
+# Readonly modifier
+- You can make properties readonly by using the readonly keyword. Readonly properties must be initialized at their declaration or in the constructor.
 
 ```javascript
-class Animal {
-    constructor(private name: string) { }
-    move(distanceInMeters: number) {
-        console.log(`${this.name} moved ${distanceInMeters}m.`);
+class Octopus {
+    readonly name: string;
+    readonly numberOfLegs: number = 8;
+    constructor (theName: string) {
+        this.name = theName;
+    }
+}
+let dad = new Octopus("Man with the 8 strong legs");
+dad.name = "Man with the 3-piece suit"; // error! name is readonly.
+
+```
+
+
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Readonly modifier -->
+
+```javascript
+class Octopus {
+    readonly name: string;
+    readonly numberOfLegs: number = 8;
+    constructor (theName: string) {
+        this.name = theName;
+    }
+}
+let dad = new Octopus("Man with the 8 strong legs");
+dad.name = "Man with the 3-piece suit"; // error! name is readonly.
+
+```
+
+- In our last example, we had to declare a readonly member name and a constructor parameter theName in the Octopus class, and we then immediately set name to theName. This turns out to be a very common practice. Parameter properties let you create and initialize a member in one place. Here’s a further revision of the previous Octopus class using a parameter property:
+
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Readonly modifier -->
+
+```javascript
+class Octopus {
+    readonly numberOfLegs: number = 8;
+    constructor(readonly name: string) {
     }
 }
 
 ```
 
-- Notice how we dropped theName altogether and just use the shortened private name: string parameter on the constructor to create and initialize the name member. We’ve consolidated the declarations and assignment into one location.
-
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Public, private, and protected modifiers
-- Parameter properties are declared by prefixing a constructor parameter with an accessibility modifier. Using private for a parameter property declares and initializes a private member; likewise, the same is done for public and protected.
+- Notice how we dropped theName altogether and just use the shortened readonly name: string parameter on the constructor to create and initialize the name member. We’ve consolidated the declarations and assignment into one location.
+- Parameter properties are declared by prefixing a constructor parameter with an accessibility modifier or readonly, or both. Using private for a parameter property declares and initializes a private member; likewise, the same is done for public, protected, and readonly.
 
 
 
@@ -335,13 +401,13 @@ if (employee.fullName) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Accessors
+<!-- # Accessors -->
 - While allowing people to randomly set fullName directly is pretty handy, this might get us in trouble if people can change names on a whim.
 - In this version, we check to make sure the user has a secret passcode available before we allow them to modify the employee. We do this by replacing the direct access to fullName with a set that will check the passcode. We add a corresponding get to allow the previous example to continue to work seamlessly.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Accessors
+<!-- # Accessors -->
 
 ```javascript
 let passcode = "secret passcode";
@@ -374,9 +440,10 @@ if (employee.fullName) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Accessors
+<!-- # Accessors -->
 - To prove to ourselves that our accessor is now checking the passcode, we can modify the passcode and see that when it doesn’t match we instead get the message warning us we don’t have access to update the employee.
-- Note: Accessors require you to set the compiler to output ECMAScript 5 or higher.
+- A couple of things to note about accessors:
+- First, accessors require you to set the compiler to output ECMAScript 5 or higher. Downlevelling to ECMAScript 3 is not supported. Second, accessors with a get and no set are automatically inferred to be readonly. This is helpful when generating a .d.ts file from your code, because users of your property can see that they can’t change it.
 
 
 
@@ -392,7 +459,7 @@ if (employee.fullName) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Static Properties
+<!-- # Static Properties -->
 
 ```javascript
 class Grid {
@@ -439,12 +506,12 @@ abstract class Animal {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Abstract Classes
+<!-- # Abstract Classes -->
 - Methods within an abstract class that are marked as abstract do not contain an implementation and must be implemented in derived classes. Abstract methods share a similar syntax to interface methods. Both define the signature of a method without including a method body. However, abstract methods must include the abstract keyword and may optionally include access modifiers.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Abstract Classes
+<!-- # Abstract Classes -->
 
 ```javascript
 abstract class Department {
@@ -554,13 +621,13 @@ console.log(greeter.greet());
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Advanced Techniques
+<!-- # Advanced Techniques -->
 - Here, when we say let greeter: Greeter, we’re using Greeter as the type of instances of the class Greeter. This is almost second nature to programmers from other object-oriented languages.
 - We’re also creating another value that we call the constructor function. This is the function that is called when we new up instances of the class. To see what this looks like in practice, let’s take a look at the JavaScript created by the above example:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Advanced Techniques
+<!-- # Advanced Techniques -->
 
 ```javascript
 let Greeter = (function () {
@@ -583,7 +650,7 @@ console.log(greeter.greet());
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Advanced Techniques
+<!-- # Advanced Techniques -->
 - Let’s modify the example a bit to show this difference:
 
 ```javascript
@@ -615,13 +682,13 @@ console.log(greeter2.greet());
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Advanced Techniques
+<!-- # Advanced Techniques -->
 - In this example, greeter1 works similarly to before. We instantiate the Greeter class, and use this object. This we have seen before.
 - Next, we then use the class directly. Here we create a new variable called greeterMaker. This variable will hold the class itself, or said another way its constructor function. Here we use typeof Greeter, that is “give me the type of the Greeter class itself” rather than the instance type. Or, more precisely, “give me the type of the symbol called Greeter,” which is the type of the constructor function. This type will contain all of the static members of Greeter along with the constructor that creates instances of the Greeter class. We show this by using new on greeterMaker, creating new instances of Greeter and invoking them as before.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Advanced Techniques
+<!-- # Advanced Techniques -->
 - Next, we then use the class directly. Here we create a new variable called greeterMaker. This variable will hold the class itself, or said another way its constructor function. Here we use typeof Greeter, that is “give me the type of the Greeter class itself” rather than the instance type. Or, more precisely, “give me the type of the symbol called Greeter,” which is the type of the constructor function. This type will contain all of the static members of Greeter along with the constructor that creates instances of the Greeter class. We show this by using new on greeterMaker, creating new instances of Greeter and invoking them as before.
 - As we said in the previous section, a class declaration creates two things: a type representing instances of the class and a constructor function. Because classes create types, you can use them in the same places you would be able to use interfaces.
 

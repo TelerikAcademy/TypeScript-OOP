@@ -54,7 +54,7 @@ padLeft("Hello world", 4); // returns "    Hello world"
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Union Types
+<!-- # Union Types -->
 - The problem with padLeft is that its padding parameter is typed as any. That means that we can call it with an argument that’s neither a number nor a string, but TypeScript will be okay with it.
 
 ```javascript
@@ -66,7 +66,7 @@ let indentedString = padLeft("Hello world", true); // passes at compile time, fa
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Union Types
+<!-- # Union Types -->
 - Instead of any, we can use a union type for the padding parameter:
 
 ```javascript
@@ -86,7 +86,7 @@ let indentedString = padLeft("Hello world", true); // errors during compilation
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Union Types
+<!-- # Union Types -->
 - A union type describes a value that can be one of several types. We use the vertical bar (|) to separate each type, so number | string | boolean is the type of a value that can be a number, a string, or a boolean.
 - If we have a value that has a union type, we can only access members that are common to all types in the union.
 
@@ -114,7 +114,7 @@ pet.swim();    // errors
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Union Types
+<!-- # Union Types -->
 - Union types can be a bit tricky here, but it just takes a bit of intuition to get used to. If a value has the type A | B, we only know for certain that it has members that both A and B have. In this example, Bird has a member named fly. We can’t be sure whether a variable typed as Bird | Fish has a fly method. If the variable is really a Fish at runtime, then calling pet.fly() will fail.
 
 
@@ -131,7 +131,7 @@ pet.swim();    // errors
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Guards and Differentiating Types
+<!-- # Type Guards and Differentiating Types -->
 
 ```javascript
 let pet = getSmallPet();
@@ -163,7 +163,7 @@ else {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Guards and Differentiating Types
+<!-- # Type Guards and Differentiating Types -->
 
 ```javascript
 let pet = getSmallPet();
@@ -182,7 +182,7 @@ else {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Guards and Differentiating Types
+<!-- # Type Guards and Differentiating Types -->
 
 ```javascript
 function isFish(pet: Fish | Bird): pet is Fish {
@@ -196,7 +196,7 @@ function isFish(pet: Fish | Bird): pet is Fish {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Guards and Differentiating Types
+<!-- # Type Guards and Differentiating Types -->
 
 ```javascript
 // Both calls to 'swim' and 'fly' are now okay.
@@ -216,7 +216,7 @@ else {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Guards and Differentiating Types
+<!-- # Type Guards and Differentiating Types -->
 
 ```javascript
 function isNumber(x: any): x is number {
@@ -242,7 +242,7 @@ function padLeft(value: string, padding: string | number) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Guards and Differentiating Types
+<!-- # Type Guards and Differentiating Types -->
 - However, having to define a function to figure out if a type is a primitive is kind of a pain. Luckily, you don’t need to abstract typeof x === "number" into its own function because TypeScript will recognize it as a type guard on its own. That means we could just write these checks inline.
 
 ```javascript
@@ -261,13 +261,13 @@ function padLeft(value: string, padding: string | number) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Guards and Differentiating Types
+<!-- # Type Guards and Differentiating Types -->
 - These typeof type guards are recognized in two different forms: typeof v === "typename" and typeof v !== "typename", where "typename" must be "number", "string", "boolean", or "symbol". While TypeScript won’t prohibit comparing to other strings, or switching the two sides of the comparison, the language won’t recognize those forms as type guards.
 - These typeof type guards are recognized in two different forms: typeof v === "typename" and typeof v !== "typename", where "typename" must be "number", "string", "boolean", or "symbol". While TypeScript won’t prohibit comparing to other strings, or switching the two sides of the comparison, the language won’t recognize those forms as type guards.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Guards and Differentiating Types
+<!-- # Type Guards and Differentiating Types -->
 - If you’ve read about typeof type guards and are familiar with the instanceof operator in JavaScript, you probably have some idea of what this section is about.
 - instanceof type guards are a way of narrowing types using their constructor function. For instance, let’s borrow our industrial string-padder example from earlier:
 
@@ -311,7 +311,7 @@ if (padder instanceof StringPadder) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Guards and Differentiating Types
+<!-- # Type Guards and Differentiating Types -->
 - The right side of the instanceof needs to be a constructor function, and TypeScript will narrow down to:
 - The right side of the instanceof needs to be a constructor function, and TypeScript will narrow down to:
 - in that order.
@@ -330,7 +330,7 @@ if (padder instanceof StringPadder) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Intersection Types
+<!-- # Intersection Types -->
 
 ```javascript
 function extend&lt;T, U&gt;(first: T, second: U): T &amp; U {
@@ -394,7 +394,7 @@ function getName(n: NameOrResolver): Name {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Aliases
+<!-- # Type Aliases -->
 - Aliasing doesn’t actually create a new type - it creates a new name to refer to that type. Aliasing a primitive is not terribly useful, though it can be used as a form of documentation.
 - Just like interfaces, type aliases can also be generic - we can just add type parameters and use them on the right side of the alias declaration:
 
@@ -406,7 +406,7 @@ type Container&lt;T&gt; = { value: T };
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Aliases
+<!-- # Type Aliases -->
 - We can also have a type alias refer to itself in a property:
 
 ```javascript
@@ -438,7 +438,7 @@ var s = people.next.next.next.name;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Aliases
+<!-- # Type Aliases -->
 - However, it’s not possible for a type alias to appear anywhere else on the right side of the declaration:
 
 ```javascript
@@ -457,7 +457,7 @@ type Yikes = Array&lt;Yikes&gt;; // error
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Aliases
+<!-- # Type Aliases -->
 - On the other hand, if you can’t express some shape with an interface and you need to use a union or tuple type, type aliases are usually the way to go.
 
 
@@ -498,7 +498,7 @@ button.animate(0, 0, "uneasy"); // error: "uneasy" is not allowed here
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# String Literal Types
+<!-- # String Literal Types -->
 - You can pass any of the three allowed strings, but any other string will give the error
 
 ```javascript
@@ -558,7 +558,7 @@ let v = new BasicCalculator(2)
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Polymorphic this types
+<!-- # Polymorphic this types -->
 - Since the class uses this types, you can extend it and the new class can use the old methods with no changes.
 
 ```javascript
@@ -584,7 +584,7 @@ let v = new ScientificCalculator(2)
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Polymorphic this types
+<!-- # Polymorphic this types -->
 - Without this types, ScientificCalculator would not have been able to extend BasicCalculator and keep the fluent interface. multiply would have returned BasicCalculator, which doesn’t have the sin method. However, with this types, multiply returns this, which is ScientificCalculator here.
 
 

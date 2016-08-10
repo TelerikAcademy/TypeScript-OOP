@@ -34,7 +34,7 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Variable Declarations
+<!-- # Variable Declarations -->
 - If you’ve used JavaScript offhandedly, the next section might be a good way to refresh your memory. If you’re intimately familiar with all the quirks of var declarations in JavaScript, you might find it easier to skip ahead.
 
 
@@ -70,7 +70,7 @@ function f() {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# var declarations
+<!-- # var declarations -->
 
 ```javascript
 function f() {
@@ -90,7 +90,7 @@ g(); // returns '11'
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# var declarations
+<!-- # var declarations -->
 
 ```javascript
 function f() {
@@ -150,12 +150,12 @@ f(false); // returns 'undefined'
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# var declarations
+<!-- # var declarations -->
 - Some readers might do a double-take at this example. The variable x was declared within the if block, and yet we were able to access it from outside that block. That’s because var declarations are accessible anywhere within their containing function, module, namespace, or global scope - all which we’ll go over later on - regardless of the containing block. Some people call this var-scoping or function-scoping. Parameters are also function scoped.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# var declarations
+<!-- # var declarations -->
 - These scoping rules can cause several types of mistakes. One problem they exacerbate is the fact that it is not an error to declare the same variable multiple times:
 
 ```javascript
@@ -176,14 +176,14 @@ function sumMatrix(matrix: number[][]) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# var declarations
+<!-- # var declarations -->
 - Maybe it was easy to spot out for some, but the inner for-loop will accidentally overwrite the variable i because i refers to the same function-scoped variable. As experienced developers know by now, similar sorts of bugs slip through code reviews and can be an endless source of frustration.
 - Maybe it was easy to spot out for some, but the inner for-loop will accidentally overwrite the variable i because i refers to the same function-scoped variable. As experienced developers know by now, similar sorts of bugs slip through code reviews and can be an endless source of frustration.
 - Take a quick second to guess what the output of the following snippet is:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# var declarations
+<!-- # var declarations -->
 
 ```javascript
 for (var i = 0; i &lt; 10; i++) {
@@ -213,7 +213,7 @@ for (var i = 0; i &lt; 10; i++) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# var declarations
+<!-- # var declarations -->
 
 ```javascript
 0
@@ -229,13 +229,12 @@ for (var i = 0; i &lt; 10; i++) {
 
 ```
 
-- Remember what we mentioned earlier about variable capturing?
-- Remember what we mentioned earlier about variable capturing?
-- Let’s take a minute to consider that in this context. setTimeout will run a function after some number of milliseconds, and also after the for loop has stopped executing. By the time the for loop has stopped executing, the value of i is 10. So each time the given function gets called, it will print out 10!
+- Remember what we mentioned earlier about variable capturing? Every function expression we pass to setTimeout actually refers to the same i from the same scope.
+- Let’s take a minute to consider that means. setTimeout will run a function after some number of milliseconds, but only after the for loop has stopped executing; By the time the for loop has stopped executing, the value of i is 10. So each time the given function gets called, it will print out 10!
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# var declarations
+<!-- # var declarations -->
 - A common work around is to use an IIFE - an Immediately Invoked Function Expression - to capture i at each iteration:
 
 ```javascript
@@ -249,7 +248,7 @@ for (var i = 0; i &lt; 10; i++) {
 
 ```
 
-- This odd-looking pattern is actually a commonplace. The i in the parameter actually shadows the i declared in the for loop, but since we named it the same, we didn’t have to modify the loop body too much.
+- This odd-looking pattern is actually pretty common. The i in the parameter list actually shadows the i declared in the for loop, but since we named them the same, we didn’t have to modify the loop body too much.
 
 
 
@@ -261,7 +260,7 @@ for (var i = 0; i &lt; 10; i++) {
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # let declarations
-- By now you’ve figured out that var has some problems, which is precisely why let statements are a new way to declare variables. Apart from the keyword used, let statements are written the same way var statements are.
+- By now you’ve figured out that var has some problems, which is precisely why let statements were introduced. Apart from the keyword used, let statements are written the same way var statements are.
 
 ```javascript
 let hello = "Hello!";
@@ -274,7 +273,7 @@ let hello = "Hello!";
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 
 ```javascript
 function f(input: boolean) {
@@ -296,7 +295,7 @@ function f(input: boolean) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 - Variables declared in a catch clause also have similar scoping rules.
 
 ```javascript
@@ -316,7 +315,7 @@ console.log(e);
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 
 ```javascript
 a++; // illegal to use 'a' before it's declared;
@@ -328,7 +327,7 @@ let a;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 
 ```javascript
 function foo() {
@@ -350,7 +349,7 @@ let a;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 
 ```javascript
 function f(x) {
@@ -375,7 +374,7 @@ let x = 20; // error: can't re-declare 'x' in the same scope
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 - The variables don’t necessarily need to both be block-scoped for TypeScript to tell us that there’s a problem.
 
 ```javascript
@@ -394,7 +393,7 @@ function g() {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 
 ```javascript
 function f(condition, x) {
@@ -415,7 +414,7 @@ f(true, 0);  // returns '100'
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 
 ```javascript
 function sumMatrix(matrix: number[][]) {
@@ -436,14 +435,14 @@ function sumMatrix(matrix: number[][]) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
-- Shadowing should usually be avoided in the interest of write clearer code. While there are some scenarios where it may be fitting to take advantage of it, you should use your best judgement.
-- Shadowing should usually be avoided in the interest of write clearer code. While there are some scenarios where it may be fitting to take advantage of it, you should use your best judgement.
+<!-- # let declarations -->
+- Shadowing should usually be avoided in the interest of writing clearer code. While there are some scenarios where it may be fitting to take advantage of it, you should use your best judgement.
+- Shadowing should usually be avoided in the interest of writing clearer code. While there are some scenarios where it may be fitting to take advantage of it, you should use your best judgement.
 - When we first touched on the idea of variable capturing with var declaration, we briefly went into how variables act once captured. To give a better intuition of this, each time a scope is run, it creates an “environment” of variables. That environment and its captured variables can exist even after everything within its scope has finished executing.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 
 ```javascript
 function theCityThatAlwaysSleeps() {
@@ -465,13 +464,13 @@ function theCityThatAlwaysSleeps() {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 - Recall that with our earlier setTimeout example, we ended up needing to use an IIFE to capture the state of a variable for every iteration of the for loop. In effect, what we were doing was creating a new variable environment for our captured variables. That was a bit of a pain, but luckily, you’ll never have to do that again in TypeScript.
 - let declarations have drastically different behavior when declared as part of a loop. Rather than just introducing a new environment to the loop itself, these declarations sort of create a new scope per iteration. Since this is what we were doing anyway with our IIFE, we can change our old setTimeout example to just use a let declaration.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let declarations
+<!-- # let declarations -->
 
 ```javascript
 for (let i = 0; i &lt; 10 ; i++) {
@@ -519,7 +518,7 @@ const numLivesForCat = 9;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# const declarations
+<!-- # const declarations -->
 
 ```javascript
 const numLivesForCat = 9;
@@ -542,7 +541,7 @@ kitty.numLives--;
 
 ```
 
-- Unless you take specific measures to avoid it, the internal state of a const variable is still modifiable.
+- Unless you take specific measures to avoid it, the internal state of a const variable is still modifiable. Fortunately, TypeScript allows you to specify that members of an object are readonly. The chapter on Interfaces has the details.
 
 
 
@@ -559,7 +558,7 @@ kitty.numLives--;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# let vs. const
+<!-- # let vs. const -->
 - On the other hand, let is not any longer to write out than var, and many users will prefer its brevity. The majority of this handbook uses let declarations in that interest.
 - Use your best judgement, and if applicable, consult the matter with the rest of your team.
 
@@ -588,7 +587,7 @@ console.log(second); // outputs 2
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Destructuring
+<!-- # Destructuring -->
 - This creates two new variables named first and second. This is equivalent to using indexing, but is much more convenient:
 
 ```javascript
@@ -619,7 +618,7 @@ f(input);
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Destructuring
+<!-- # Destructuring -->
 - You can create a variable for the remaining items in a list using the syntax ...name:
 
 ```javascript
@@ -640,7 +639,7 @@ console.log(first); // outputs 1
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Destructuring
+<!-- # Destructuring -->
 - Or other elements:
 
 ```javascript
@@ -671,7 +670,7 @@ let {a, b} = o;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Destructuring
+<!-- # Destructuring -->
 
 ```javascript
 ({a, b} = {a: "baz", b: 101});
@@ -691,7 +690,7 @@ let {a: newName1, b: newName2} = o;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Destructuring
+<!-- # Destructuring -->
 
 ```javascript
 let newName1 = o.a;
@@ -724,7 +723,7 @@ function keepWholeObject(wholeObject: {a: string, b?: number}) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Destructuring
+<!-- # Destructuring -->
 - keepWholeObject now has a variable for wholeObject as well as the properties a and b, even if b is undefined.
 - keepWholeObject now has a variable for wholeObject as well as the properties a and b, even if b is undefined.
 - Destructuring also works in function declarations. For simple cases this is straightforward:
@@ -741,7 +740,7 @@ function f({a, b}: C): void {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Destructuring
+<!-- # Destructuring -->
 
 ```javascript
 function f({a, b} = {a: "", b: 0}): void {
@@ -766,7 +765,7 @@ f({}) // error, 'a' is required if you supply an argument
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Destructuring
+<!-- # Destructuring -->
 - Use destructuring with care. As the previous example demonstrates, anything but the simplest destructuring expressions have a lot of corner cases. This is especially true with deeply nested destructuring, which gets really hard to understand even without piling on renaming, default values, and type annotations. Try to keep destructuring expressions small and simple. You can always write the assignments that destructuring would generate yourself.
 
 

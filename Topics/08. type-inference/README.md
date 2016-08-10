@@ -50,7 +50,7 @@ let x = 3;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Basics
+<!-- # Basics -->
 - In most cases, type inference is straightforward. In the following sections, we’ll explore some of the nuances in how types are inferred.
 
 
@@ -74,7 +74,7 @@ let x = [0, 1, null];
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Best common type
+<!-- # Best common type -->
 - Because the best common type has to be chosen from the provided candidate types, there are some cases where types share a common structure, but no one type is the super type of all candidate types. For example:
 
 ```javascript
@@ -86,7 +86,7 @@ let zoo = [new Rhino(), new Elephant(), new Snake()];
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Best common type
+<!-- # Best common type -->
 
 ```javascript
 let zoo: Animal[] = [new Rhino(), new Elephant(), new Snake()];
@@ -118,7 +118,7 @@ window.onmousedown = function(mouseEvent) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Contextual Type
+<!-- # Contextual Type -->
 - If the contextually typed expression contains explicit type information, the contextual type is ignored. Had we written the above example:
 
 ```javascript
@@ -132,7 +132,7 @@ window.onmousedown = function(mouseEvent: any) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Contextual Type
+<!-- # Contextual Type -->
 - Contextual typing applies in many cases. Common cases include arguments to function calls, right hand sides of assignments, type assertions, members of object and array literals, and return statements. The contextual type also acts as a candidate type in best common type. For example:
 
 ```javascript
@@ -145,7 +145,7 @@ function createZoo(): Animal[] {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Contextual Type
+<!-- # Contextual Type -->
 - In this example, best common type has a set of four candidates: Animal, Rhino, Elephant, and Snake. Of these, Animal can be chosen by the best common type algorithm.
 
 

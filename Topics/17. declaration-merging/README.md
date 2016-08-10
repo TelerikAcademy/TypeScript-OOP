@@ -47,7 +47,7 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Basic Concepts
+<!-- # Basic Concepts -->
 - In TypeScript, a declaration creates entities in at least one of three groups: namespace, type, or value. Namespace-creating declarations create a namespace, which contains names that are accessed using a dotted notation. Type-creating declarations do just that: they create a type that is visible with the declared shape and bound to the given name. Lastly, value-creating declarations create values that are visible in the output JavaScript.
 - Understanding what is created with each declaration will help you understand what is merged when you perform a declaration merge.
 
@@ -80,13 +80,13 @@ let box: Box = {height: 5, width: 6, scale: 10};
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Interfaces
+<!-- # Merging Interfaces -->
 - Non-function members of the interfaces must be unique. The compiler will issue an error if the interfaces both declare a non-function member of the same name.
 - For function members, each function member of the same name is treated as describing an overload of the same function. Of note, too, is that in the case of interface A merging with later interface A, the second interface will have a higher precedence than the first.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Interfaces
+<!-- # Merging Interfaces -->
 - That is, in the example:
 
 ```javascript
@@ -120,13 +120,13 @@ interface Cloner {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Interfaces
+<!-- # Merging Interfaces -->
 - Notice that the elements of each group maintains the same order, but the groups themselves are merged with later overload sets ordered first.
 - One exception to this rule is specialized signatures. If a signature has a parameter whose type is a single string literal type (e.g. not a union of string literals), then it will be bubbled toward the top of its merged overload list.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Interfaces
+<!-- # Merging Interfaces -->
 - For instance, the following interfaces will merge together:
 
 ```javascript
@@ -147,7 +147,7 @@ interface Document {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Interfaces
+<!-- # Merging Interfaces -->
 - The resulting merged declaration of Document will be the following:
 
 ```javascript
@@ -177,7 +177,7 @@ interface Document {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Namespaces
+<!-- # Merging Namespaces -->
 - To merge the namespace value, at each declaration site, if a namespace already exists with the given name, it is further extended by taking the existing namespace and adding the exported members of the second namespace to the first.
 - The declaration merge of Animals in this example:
 
@@ -196,7 +196,7 @@ namespace Animals {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Namespaces
+<!-- # Merging Namespaces -->
 - is equivalent to:
 
 ```javascript
@@ -213,7 +213,7 @@ namespace Animals {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Namespaces
+<!-- # Merging Namespaces -->
 - We can see this more clearly in this example:
 
 ```javascript
@@ -250,7 +250,7 @@ namespace Animal {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Namespaces with Classes, Functions, and Enums
+<!-- # Merging Namespaces with Classes, Functions, and Enums -->
 - This gives the user a way of describing inner classes.
 
 ```javascript
@@ -267,7 +267,7 @@ namespace Album {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Namespaces with Classes, Functions, and Enums
+<!-- # Merging Namespaces with Classes, Functions, and Enums -->
 - In addition to the pattern of inner classes, you may also be familiar with JavaScript practice of creating a function and then extending the function further by adding properties onto the function. TypeScript uses declaration merging to build up definitions like this in a type-safe way.
 
 ```javascript
@@ -287,7 +287,7 @@ alert(buildLabel("Sam Smith"));
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Merging Namespaces with Classes, Functions, and Enums
+<!-- # Merging Namespaces with Classes, Functions, and Enums -->
 - Similarly, namespaces can be used to extend enums with static members:
 
 ```javascript
@@ -358,7 +358,7 @@ Observable.prototype.map = function (f) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Module Augmentation
+<!-- # Module Augmentation -->
 - This works fine in TypeScript too, but the compiler doesn’t know about Observable.prototype.map. You can use module augmentation to tell the compiler about it:
 
 ```javascript
@@ -386,13 +386,13 @@ o.map(x =&gt; x.toFixed());
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Module Augmentation
+<!-- # Module Augmentation -->
 - The module name is resolved the same way as module specifiers in import/export. See Modules for more information. Then the declarations in an augmentation are merged as if they were declared in the same file as the original. However, you can’t declare new top-level declarations in the augmentation – just patches to existing declarations.
 - The module name is resolved the same way as module specifiers in import/export. See Modules for more information. Then the declarations in an augmentation are merged as if they were declared in the same file as the original. However, you can’t declare new top-level declarations in the augmentation – just patches to existing declarations.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Module Augmentation
+<!-- # Module Augmentation -->
 - You can also add declarations to the global scope from inside a module:
 
 ```javascript

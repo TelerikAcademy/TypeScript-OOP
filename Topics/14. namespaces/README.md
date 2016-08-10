@@ -98,7 +98,7 @@ for (let s of strings) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Namespacing
+<!-- # Namespacing -->
 - In this example, we’ll move all validator-related entities into a namespace called Validation. Because we want the interfaces and classes here to be visible outside the namespace, we preface them with export. Conversely, the variables lettersRegexp and numberRegexp are implementation details, so they are left unexported and will not be visible to code outside the namespace. In the test code at the bottom of the file, we now need to qualify the names of the types when used outside the namespace, e.g. Validation.LettersOnlyValidator.
 
 ```javascript
@@ -157,7 +157,7 @@ for (let s of strings) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Splitting Across Files
+<!-- # Splitting Across Files -->
 - Here, we’ll split our Validation namespace across many files. Even though the files are separate, they can each contribute to the same namespace and can be consumed as if they were all defined in one place. Because there are dependencies between files, we’ll add reference tags to tell the compiler about the relationships between the files. Our test code is otherwise unchanged.
 
 ```javascript
@@ -196,7 +196,7 @@ namespace Validation {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Splitting Across Files
+<!-- # Splitting Across Files -->
 
 ```javascript
 /// &lt;reference path="Validation.ts" /&gt;
@@ -265,7 +265,7 @@ for (let s of strings) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Splitting Across Files
+<!-- # Splitting Across Files -->
 - Once there are multiple files involved, we’ll need to make sure all of the compiled code gets loaded. There are two ways of doing this.
 - First, we can use concatenated output using the --outFile flag to compile all of the input files into a single JavaScript output file:
 
@@ -278,7 +278,7 @@ tsc --outFile sample.js Test.ts
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Splitting Across Files
+<!-- # Splitting Across Files -->
 
 ```javascript
 tsc --outFile sample.js Validation.ts LettersOnlyValidator.ts ZipCodeValidator.ts Test.ts
@@ -289,7 +289,7 @@ tsc --outFile sample.js Validation.ts LettersOnlyValidator.ts ZipCodeValidator.t
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Splitting Across Files
+<!-- # Splitting Across Files -->
 - Alternatively, we can use per-file compilation (the default) to emit one JavaScript file for each input file. If multiple JS files get produced, we’ll need to use &lt;script&gt; tags on our webpage to load each emitted file in the appropriate order, for example:
 
 ```javascript
@@ -315,7 +315,7 @@ tsc --outFile sample.js Validation.ts LettersOnlyValidator.ts ZipCodeValidator.t
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Aliases
+<!-- # Aliases -->
 
 ```javascript
 namespace Shapes {
@@ -347,13 +347,13 @@ let sq = new polygons.Square(); // Same as 'new Shapes.Polygons.Square()'
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Other JavaScript Libraries
+<!-- # Working with Other JavaScript Libraries -->
 - We call declarations that don’t define an implementation “ambient”. Typically these are defined in .d.ts files. If you’re familiar with C/C++, you can think of these as .h files. Let’s look at a few examples.
 - The popular library D3 defines its functionality in a global object called d3. Because this library is loaded through a &lt;script&gt; tag (instead of a module loader), its declaration uses namespaces to define its shape. For the TypeScript compiler to see this shape, we use an ambient namespace declaration. For example, we could begin writing it as follows:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Other JavaScript Libraries
+<!-- # Working with Other JavaScript Libraries -->
 - The popular library D3 defines its functionality in a global object called d3. Because this library is loaded through a &lt;script&gt; tag (instead of a module loader), its declaration uses namespaces to define its shape. For the TypeScript compiler to see this shape, we use an ambient namespace declaration. For example, we could begin writing it as follows:
 
 ```javascript

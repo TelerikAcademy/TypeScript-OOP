@@ -58,7 +58,7 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Using Modules
+<!-- # Using Modules -->
 - It is also worth noting that, for Node.js applications, modules are the default and the recommended approach to structure your code.
 - Starting with ECMAScript 2015, modules are native part of the language, and should be supported by all compliant engine implementations. Thus, for new projects modules would be the recommended code organization mechanism.
 
@@ -78,13 +78,13 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Pitfalls of Namespaces and Modules
+<!-- # Pitfalls of Namespaces and Modules -->
 - The compiler will try to find a .ts, .tsx, and then a .d.ts with the appropriate path. If a specific file could not be found, then the compiler will look for an ambient module declaration. Recall that these need to be declared in a .d.ts file.
 - The compiler will try to find a .ts, .tsx, and then a .d.ts with the appropriate path. If a specific file could not be found, then the compiler will look for an ambient module declaration. Recall that these need to be declared in a .d.ts file.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Pitfalls of Namespaces and Modules
+<!-- # Pitfalls of Namespaces and Modules -->
 - The reference tag here allows us to locate the declaration file that contains the declaration for the ambient module. This is how the node.d.ts file that several of the TypeScript samples use is consumed.
 - The reference tag here allows us to locate the declaration file that contains the declaration for the ambient module. This is how the node.d.ts file that several of the TypeScript samples use is consumed.
 - If you’re converting a program from namespaces to modules, it can be easy to end up with a file that looks like this:
@@ -92,19 +92,19 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Pitfalls of Namespaces and Modules
+<!-- # Pitfalls of Namespaces and Modules -->
 - The top-level module here Shapes wraps up Triangle and Square for no reason. This is confusing and annoying for consumers of your module:
 - The top-level module here Shapes wraps up Triangle and Square for no reason. This is confusing and annoying for consumers of your module:
 - A key feature of modules in TypeScript is that two different modules will never contribute names to the same scope. Because the consumer of a module decides what name to assign it, there’s no need to proactively wrap up the exported symbols in a namespace.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Pitfalls of Namespaces and Modules
+<!-- # Pitfalls of Namespaces and Modules -->
 - To reiterate why you shouldn’t try to namespace your module contents, the general idea of namespacing is to provide logical grouping of constructs and to prevent name collisions. Because the module file itself is already a logical grouping, and its top-level name is defined by the code that imports it, it’s unnecessary to use an additional module layer for exported objects.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Pitfalls of Namespaces and Modules
+<!-- # Pitfalls of Namespaces and Modules -->
 - Here’s a revised example:
 - Here’s a revised example:
 - Here’s a revised example:

@@ -55,7 +55,7 @@ function identity(arg: number): number {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Hello World of Generics
+<!-- # Hello World of Generics -->
 - Or, we could describe the identity function using the any type:
 
 ```javascript
@@ -69,7 +69,7 @@ function identity(arg: any): any {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Hello World of Generics
+<!-- # Hello World of Generics -->
 - Instead, we need a way of capturing the type of the argument in such a way that we can also use it to denote what is being returned. Here, we will use a type variable, a special kind of variable that works on types rather than values.
 
 ```javascript
@@ -83,13 +83,13 @@ function identity&lt;T&gt;(arg: T): T {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Hello World of Generics
+<!-- # Hello World of Generics -->
 - We say that this version of the identity function is generic, as it works over a range of types. Unlike using any, it’s also just as precise (ie, it doesn’t lose any information) as the first identity function that used numbers for the argument and return type.
 - Once we’ve written the generic identity function, we can call it in one of two ways. The first way is to pass all of the arguments, including the type argument, to the function:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Hello World of Generics
+<!-- # Hello World of Generics -->
 
 ```javascript
 let output = identity&lt;string&gt;("myString");  // type of output will be 'string'
@@ -101,7 +101,7 @@ let output = identity&lt;string&gt;("myString");  // type of output will be 'str
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Hello World of Generics
+<!-- # Hello World of Generics -->
 
 ```javascript
 let output = identity("myString");  // type of output will be 'string'
@@ -133,7 +133,7 @@ function identity&lt;T&gt;(arg: T): T {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Generic Type Variables
+<!-- # Working with Generic Type Variables -->
 - What if we want to also log the length of the argument arg to the console with each call? We might be tempted to write this:
 
 ```javascript
@@ -148,7 +148,7 @@ function loggingIdentity&lt;T&gt;(arg: T): T {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Generic Type Variables
+<!-- # Working with Generic Type Variables -->
 - Let’s say that we’ve actually intended this function to work on arrays of T rather than T directly. Since we’re working with arrays, the .length member should be available. We can describe this just like we would create arrays of other types:
 
 ```javascript
@@ -162,12 +162,12 @@ function loggingIdentity&lt;T&gt;(arg: T[]): T[] {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Generic Type Variables
+<!-- # Working with Generic Type Variables -->
 - You can read the type of loggingIdentity as “the generic function loggingIdentity takes a type parameter T, and an argument arg which is an array of Ts, and returns an array of Ts.” If we passed in an array of numbers, we’d get an array of numbers back out, as T would bind to number. This allows us to use our generic type variable T as part of the types we’re working with, rather than the whole type, giving us greater flexibility.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Generic Type Variables
+<!-- # Working with Generic Type Variables -->
 - We can alternatively write the sample example this way:
 
 ```javascript
@@ -205,7 +205,7 @@ let myIdentity: &lt;T&gt;(arg: T) =&gt; T = identity;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Types
+<!-- # Generic Types -->
 - We could also have used a different name for the generic type parameter in the type, so long as the number of type variables and how the type variables are used line up.
 
 ```javascript
@@ -221,7 +221,7 @@ let myIdentity: &lt;U&gt;(arg: U) =&gt; U = identity;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Types
+<!-- # Generic Types -->
 
 ```javascript
 function identity&lt;T&gt;(arg: T): T {
@@ -250,7 +250,7 @@ let myIdentity: GenericIdentityFn = identity;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Types
+<!-- # Generic Types -->
 - In a similar example, we may want to move the generic parameter to be a parameter of the whole interface. This lets us see what type(s) we’re generic over (e.g. Dictionary&lt;string&gt; rather than just Dictionary). This makes the type parameter visible to all the other members of the interface.
 
 ```javascript
@@ -269,12 +269,12 @@ let myIdentity: GenericIdentityFn&lt;number&gt; = identity;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Types
+<!-- # Generic Types -->
 - Notice that our example has changed to be something slightly different. Instead of describing a generic function, we now have a non-generic function signature that is a part of a generic type. When we use GenericIdentityFn, we now will also need to specify the corresponding type argument (here: number), effectively locking in what the underlying call signature will use. Understanding when to put the type parameter directly on the call signature and when to put it on the interface itself will be helpful in describing what aspects of a type are generic.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Types
+<!-- # Generic Types -->
 - In addition to generic interfaces, we can also create generic classes. Note that it is not possible to create generic enums and namespaces.
 
 
@@ -304,7 +304,7 @@ myGenericNumber.add = function(x, y) { return x + y; };
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Classes
+<!-- # Generic Classes -->
 - This is a pretty literal use of the GenericNumber class, but you may have noticed that nothing is restricting it to only use the number type. We could have instead used string or even more complex objects.
 
 ```javascript
@@ -319,7 +319,7 @@ alert(stringNumeric.add(stringNumeric.zeroValue, "test"));
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Classes
+<!-- # Generic Classes -->
 - Just as with interface, putting the type parameter on the class itself lets us make sure all of the properties of the class are working with the same type.
 - As we covered in our section on classes, a class has two sides to its type: the static side and the instance side. Generic classes are only generic over their instance side rather than their static side, so when working with classes, static members can not use the class’s type parameter.
 
@@ -337,7 +337,7 @@ alert(stringNumeric.add(stringNumeric.zeroValue, "test"));
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Constraints
+<!-- # Generic Constraints -->
 
 ```javascript
 function loggingIdentity&lt;T&gt;(arg: T): T {
@@ -351,7 +351,7 @@ function loggingIdentity&lt;T&gt;(arg: T): T {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Constraints
+<!-- # Generic Constraints -->
 - To do so, we’ll create an interface that describes our constraint. Here, we’ll create an interface that has a single .length property and then we’ll use this interface and the extends keyword to denote our constraint:
 
 ```javascript
@@ -369,7 +369,7 @@ function loggingIdentity&lt;T extends Lengthwise&gt;(arg: T): T {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Constraints
+<!-- # Generic Constraints -->
 - Because the generic function is now constrained, it will no longer work over any and all types:
 
 ```javascript
@@ -394,7 +394,7 @@ loggingIdentity({length: 10, value: 3});
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Constraints
+<!-- # Generic Constraints -->
 
 ```javascript
 function copyFields&lt;T extends U, U&gt;(target: T, source: U): T {
@@ -431,7 +431,7 @@ copyFields(x, { Q: 90 });  // error: property 'Q' isn't declared in 'x'.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generic Constraints
+<!-- # Generic Constraints -->
 
 ```javascript
 function create&lt;T&gt;(c: {new(): T; }): T {

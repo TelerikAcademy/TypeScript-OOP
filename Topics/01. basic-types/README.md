@@ -23,6 +23,7 @@
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Table of Contents
+- [Null and Undefined](#null-and-undefined)
 - [Type assertions](#type-assertions)
 - [A note about let](#a-note-about-let)
 
@@ -100,7 +101,7 @@ color = 'red';
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# String
+<!-- # String -->
 - You can also use template strings, which can span multiple lines and have embedded expressions. These strings are surrounded by the backtick/backquote (`) character, and embedded expressions are of the form ${ expr }.
 
 ```javascript
@@ -115,7 +116,7 @@ I'll be ${ age + 1 } years old next month.`
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# String
+<!-- # String -->
 - This is equivalent to declaring sentence like so:
 
 ```javascript
@@ -175,7 +176,7 @@ x = [10, "hello"]; // Error
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Tuple
+<!-- # Tuple -->
 - When accessing an element with a known index, the correct type is retrieved:
 
 ```javascript
@@ -198,7 +199,7 @@ x[6] = true; // Error, 'boolean' isn't 'string | number'
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Tuple
+<!-- # Tuple -->
 - Union types are an advanced topic that we’ll cover in a later chapter.
 
 
@@ -223,7 +224,7 @@ let c: Color = Color.Green;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Enum
+<!-- # Enum -->
 
 ```javascript
 enum Color {Red = 1, Green, Blue};
@@ -243,7 +244,7 @@ let c: Color = Color.Green;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Enum
+<!-- # Enum -->
 
 ```javascript
 enum Color {Red = 1, Green, Blue};
@@ -276,12 +277,12 @@ notSure = false; // okay, definitely a boolean
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Any
+<!-- # Any -->
 - The any type is a powerful way to work with existing JavaScript, allowing you to gradually opt-in and opt-out of type-checking during compilation. You might expect Object to play a similar role, as it does in other languages. But variables of type Object only allow you to assign any value to them – you can’t call arbitrary methods on them, even ones that actually exist:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Any
+<!-- # Any -->
 
 ```javascript
 let notSure: any = 4;
@@ -297,7 +298,7 @@ prettySure.toFixed(); // Error: Property 'toFixed' doesn't exist on type 'Object
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Any
+<!-- # Any -->
 
 ```javascript
 let list: any[] = [1, true, "free"];
@@ -338,6 +339,33 @@ let unusable: void = undefined;
 
 
 <!-- section start -->
+<!-- attr: { id:'null-and-undefined', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Null and Undefined -->
+
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+# Null and Undefined
+- In TypeScript, both undefined and null actually have their own types named undefined and null respectively. Much like void, they’re not extremely useful on their own:
+
+```javascript
+// Not much else we can assign to these variables!
+let u: undefined = undefined;
+let n: null = null;
+
+```
+
+- By default null and undefined are subtypes of all other types. That means you can assign null and undefined to something like number.
+
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Null and Undefined -->
+- However, when using the --strictNullChecks flag, null and undefined are only assignable to void and their respective types. This helps avoid many common errors. In cases where you want to pass in either a string or null or undefined, you can use the union type string | null | undefined. Once again, more on union types later on.
+- However, when using the --strictNullChecks flag, null and undefined are only assignable to void and their respective types. This helps avoid many common errors. In cases where you want to pass in either a string or null or undefined, you can use the union type string | null | undefined. Once again, more on union types later on.
+
+
+
+
+<!-- section start -->
 <!-- attr: { id:'type-assertions', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Type assertions -->
 
@@ -349,7 +377,7 @@ let unusable: void = undefined;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type assertions
+<!-- # Type assertions -->
 - Type assertions have two forms. One is the “angle-bracket” syntax:
 
 ```javascript

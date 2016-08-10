@@ -41,12 +41,12 @@ enum Direction {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Enums
+<!-- # Enums -->
 - The body of an enum consists of zero or more enum members. Enum members have numeric value associated with them and can be either constant or computed. An enum member is considered constant if:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Enums
+<!-- # Enums -->
 - In all other cases enum member is considered computed.
 
 ```javascript
@@ -66,7 +66,7 @@ enum FileAccess {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Enums
+<!-- # Enums -->
 
 ```javascript
 enum Enum {
@@ -93,7 +93,7 @@ var nameOfA = Enum[Enum.A]; // "A"
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Enums
+<!-- # Enums -->
 
 ```javascript
 const enum Enum {
@@ -120,7 +120,7 @@ let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Ri
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Enums
+<!-- # Enums -->
 - in generated code will become
 
 ```javascript

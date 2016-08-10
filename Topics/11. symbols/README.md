@@ -48,7 +48,7 @@ sym2 === sym3; // false, symbols are unique
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 - Just like strings, symbols can be used as keys for object properties.
 
 ```javascript
@@ -96,7 +96,7 @@ let className = c[getClassNameSymbol](); // "C"
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Well-known Symbols
+<!-- # Well-known Symbols -->
 - A method that determines if a constructor object recognizes an object as one of the constructor’s instances. Called by the semantics of the instanceof operator.
 - A Boolean value indicating that an object should be flatten to its array elements by Array.prototype.concat.
 - A Boolean value indicating that an object should be flatten to its array elements by Array.prototype.concat.
@@ -106,7 +106,7 @@ let className = c[getClassNameSymbol](); // "C"
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Well-known Symbols
+<!-- # Well-known Symbols -->
 - A regular expression method that matches the regular expression against a string. Called by the String.prototype.match method.
 - A regular expression method that replaces matched substrings of a string. Called by the String.prototype.replace method.
 - A regular expression method that replaces matched substrings of a string. Called by the String.prototype.replace method.
@@ -116,7 +116,7 @@ let className = c[getClassNameSymbol](); // "C"
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Well-known Symbols
+<!-- # Well-known Symbols -->
 - A function valued property that is the constructor function that is used to create derived objects.
 - A regular expression method that splits a string at the indices that match the regular expression. Called by the String.prototype.split method.
 - A regular expression method that splits a string at the indices that match the regular expression. Called by the String.prototype.split method.
@@ -126,7 +126,7 @@ let className = c[getClassNameSymbol](); // "C"
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Well-known Symbols
+<!-- # Well-known Symbols -->
 - A String value that is used in the creation of the default string description of an object. Called by the built-in method Object.prototype.toString.
 - An Object whose own property names are property names that are excluded from the ‘with’ environment bindings of the associated objects.
 

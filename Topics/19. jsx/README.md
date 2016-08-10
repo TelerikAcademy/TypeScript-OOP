@@ -48,7 +48,7 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Basic usage
+<!-- # Basic usage -->
 - TypeScript ships with two JSX modes: preserve and react. These modes only affect the emit stage - type checking is unaffected. The preserve mode will keep the JSX as part of the output to be further consumed by another transform step (e.g. Babel). Additionally the output will have a .jsx file extension. The react mode will emit React.createElement, does not need to go through a JSX transformation before use, and the output will have a .js file extension.
 - You can specify this mode using either the --jsx command line flag or the corresponding option in your tsconfig.json file.
 - You can specify this mode using either the --jsx command line flag or the corresponding option in your tsconfig.json file.
@@ -75,7 +75,7 @@ var foo = &lt;foo&gt;bar;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# The as operator
+<!-- # The as operator -->
 
 ```javascript
 var foo = bar as foo;
@@ -98,19 +98,19 @@ var foo = bar as foo;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 - In order to understand type checking with JSX, you must first understand the difference between intrinsic elements and value-based elements. Given a JSX expression &lt;expr /&gt;, expr may either refer to something intrinsic to the environment (e.g. a div or span in a DOM environment) or to a custom component that you’ve created. This is important for two reasons:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 - TypeScript uses the same convention that React does for distinguishing between these. An intrinsic element always begins with a lowercase letter, and a value-based element always begins with an uppercase letter.
 - TypeScript uses the same convention that React does for distinguishing between these. An intrinsic element always begins with a lowercase letter, and a value-based element always begins with an uppercase letter.
 - Intrinsic elements are looked up on the special interface JSX.IntrinsicElements. By default, if this interface is not specified, then anything goes and intrinsic elements will not be type checked. However, if interface is present, then the name of the intrinsic element is looked up as a property on the JSX.IntrinsicElements interface. For example:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 
 ```javascript
 declare namespace JSX {
@@ -129,7 +129,7 @@ declare namespace JSX {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 - In the above example, &lt;foo /&gt; will work fine but &lt;bar /&gt; will result in an error since it has not been specified on JSX.IntrinsicElements.
 - Value based elements are simply looked up by identifiers that are in scope.
 
@@ -145,13 +145,13 @@ import MyComponent from "./myComponent";
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 - Given &lt;Expr /&gt;, the element class type is the type of Expr. So in the example above, if MyComponent was an ES6 class the class type would be that class. If MyComponent was a factory function, the class type would be that function.
 - Once the class type is established, the instance type is determined by the union of the return types of the class type’s call signatures and construct signatures. So again, in the case of an ES6 class, the instance type would be the type of an instance of that class, and in the case of a factory function, it would be the type of the value returned from the function.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 
 ```javascript
 class MyComponent {
@@ -182,7 +182,7 @@ var myComponent = MyFactoryFunction();
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 - The element instance type is interesting because it must be assignable to JSX.ElementClass or it will result in an error. By default JSX.ElementClass is {}, but it can be augmented to limit the use of JSX to only those types that conform to the proper interface.
 
 ```javascript
@@ -215,7 +215,7 @@ function NotAValidFactoryFunction() {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 
 ```javascript
 declare namespace JSX JSX {
@@ -262,7 +262,7 @@ declare namespace JSX {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 - For value-based elements, it is a bit more complex. It is determined by the type of a property on the element instance type that was previously determined. Which property to use is determined by JSX.ElementAttributesProperty. It should be declared with a single property. The name of that property is then used.
 
 ```javascript
@@ -287,7 +287,7 @@ class MyComponent {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 - The element attribute type is used to type check the attributes in the JSX. Optional and required properties are supported.
 
 ```javascript
@@ -309,7 +309,7 @@ declare namespace JSX {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Type Checking
+<!-- # Type Checking -->
 
 ```javascript
 declare namespace JSX {

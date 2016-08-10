@@ -30,7 +30,7 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Iterables
+<!-- # Iterables -->
 
 ```javascript
 let someArray = [1, "string", false];
@@ -55,7 +55,7 @@ for (let entry of someArray) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Iterables
+<!-- # Iterables -->
 - Here is an example that demonstrates this distinction:
 
 ```javascript
@@ -75,7 +75,7 @@ for (let i of list) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Iterables
+<!-- # Iterables -->
 
 ```javascript
 let pets = new Set(["Cat", "Dog", "Hamster"]);
@@ -125,7 +125,7 @@ for (let pet of pets) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Iterables
+<!-- # Iterables -->
 - The compiler will generate a simple for loop for a for..of loop, for instance:
 
 ```javascript

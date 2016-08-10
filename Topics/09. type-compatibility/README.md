@@ -50,13 +50,13 @@ p = new Person();
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 - In nominally-typed languages like C# or Java, the equivalent code would be an error because the Person class does not explicitly describe itself as being an implementor of the Named interface.
 - TypeScript’s structural type system was designed based on how JavaScript code is typically written. Because JavaScript widely uses anonymous objects like function expressions and object literals, it’s much more natural to represent the kinds of relationships found in JavaScript libraries with a structural type system instead of a nominal one.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 - TypeScript’s structural type system was designed based on how JavaScript code is typically written. Because JavaScript widely uses anonymous objects like function expressions and object literals, it’s much more natural to represent the kinds of relationships found in JavaScript libraries with a structural type system instead of a nominal one.
 - TypeScript’s type system allows certain operations that can’t be known at compile-time to be safe. When a type system has this property, it is said to not be “sound”. The places where TypeScript allows unsound behavior were carefully considered, and throughout this document we’ll explain where these happen and the motivating scenarios behind them.
 
@@ -88,7 +88,7 @@ x = y;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Starting out
+<!-- # Starting out -->
 - The same rule for assignment is used when checking function call arguments:
 
 ```javascript
@@ -126,18 +126,18 @@ x = y; // Error
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Comparing two functions
+<!-- # Comparing two functions -->
 - To check if x is assignable to y, we first look at the parameter list. Each parameter in x must have a corresponding parameter in y with a compatible type. Note that the names of the parameters are not considered, only their types. In this case, every parameter of x has a corresponding compatible parameter in y, so the assignment is allowed.
 - The second assignment is an error, because y has a required second parameter that ‘x’ does not have, so the assignment is disallowed.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Comparing two functions
+<!-- # Comparing two functions -->
 - You may be wondering why we allow ‘discarding’ parameters like in the example y = x. The reason for this assignment to be allowed is that ignoring extra function parameters is actually quite common in JavaScript. For example, Array#forEach provides three parameters to the callback function: the array element, its index, and the containing array. Nevertheless, it’s very useful to provide a callback that only uses the first parameter:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Comparing two functions
+<!-- # Comparing two functions -->
 
 ```javascript
 let items = [1, 2, 3];
@@ -164,14 +164,14 @@ y = x; // Error because x() lacks a location property
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Comparing two functions
+<!-- # Comparing two functions -->
 - The type system enforces that the source function’s return type be a subtype of the target type’s return type.
 - The type system enforces that the source function’s return type be a subtype of the target type’s return type.
 - When comparing the types of function parameters, assignment succeeds if either the source parameter is assignable to the target parameter, or vice versa. This is unsound because a caller might end up being given a function that takes a more specialized type, but invokes the function with a less specialized type. In practice, this sort of error is rare, and allowing this enables many common JavaScript patterns. A brief example:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Comparing two functions
+<!-- # Comparing two functions -->
 
 ```javascript
 enum EventType { Mouse, Keyboard }
@@ -199,7 +199,7 @@ listenEvent(EventType.Mouse, (e: number) =&gt; console.log(e));
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Comparing two functions
+<!-- # Comparing two functions -->
 
 ```javascript
 enum EventType { Mouse, Keyboard }
@@ -229,13 +229,13 @@ listenEvent(EventType.Mouse, (e: number) =&gt; console.log(e));
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Comparing two functions
+<!-- # Comparing two functions -->
 - This is unsound from a type system perspective, but from a runtime point of view the idea of an optional parameter is generally not well-enforced since passing undefined in that position is equivalent for most functions.
 - The motivating example is the common pattern of a function that takes a callback and invokes it with some predictable (to the programmer) but unknown (to the type system) number of arguments:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Comparing two functions
+<!-- # Comparing two functions -->
 
 ```javascript
 function invokeLater(args: any[], callback: (...args: any[]) =&gt; void) {
@@ -253,7 +253,7 @@ invokeLater([1, 2], (x?, y?) =&gt; console.log(x + ", " + y));
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Comparing two functions
+<!-- # Comparing two functions -->
 
 ```javascript
 function invokeLater(args: any[], callback: (...args: any[]) =&gt; void) {
@@ -326,7 +326,7 @@ s = a;  //OK
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Classes
+<!-- # Classes -->
 
 ```javascript
 class Animal {
@@ -375,7 +375,7 @@ x = y;  // okay, y matches structure of x
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generics
+<!-- # Generics -->
 
 ```javascript
 interface NotEmpty&lt;T&gt; {
@@ -393,7 +393,7 @@ x = y;  // error, x and y are not compatible
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Generics
+<!-- # Generics -->
 - For example,
 
 ```javascript

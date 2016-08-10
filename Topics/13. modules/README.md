@@ -42,13 +42,13 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 - Modules are declarative; the relationships between modules are specified in terms of imports and exports at the file level.
 - Modules import one another using a module loader. At runtime the module loader is responsible for locating and executing all dependencies of a module before executing it. Well-known modules loaders used in JavaScript are the CommonJS module loader for Node.js and require.js for Web applications.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction
+<!-- # Introduction -->
 - In TypeScript, just as in ECMAScript 2015, any file containing a top-level import or export is considered a module.
 
 
@@ -95,7 +95,7 @@ export class ZipCodeValidator implements StringValidator {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Export
+<!-- # Export -->
 
 ```javascript
 export const numberRegexp = /^[0-9]+$/;
@@ -124,7 +124,7 @@ export { ZipCodeValidator as mainValidator };
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Export
+<!-- # Export -->
 
 ```javascript
 class ZipCodeValidator implements StringValidator {
@@ -155,7 +155,7 @@ export {ZipCodeValidator as RegExpBasedZipCodeValidator} from "./ZipCodeValidato
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Export
+<!-- # Export -->
 - Optionally, a module can wrap one or more modules and combine all their exports using export * from "module" syntax.
 - Optionally, a module can wrap one or more modules and combine all their exports using export * from "module" syntax.
 
@@ -198,7 +198,7 @@ let myValidator = new ZCV();
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Import
+<!-- # Import -->
 
 ```javascript
 import { ZipCodeValidator as ZCV } from "./ZipCodeValidator";
@@ -224,7 +224,7 @@ let myValidator = new validator.ZipCodeValidator();
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Import
+<!-- # Import -->
 
 ```javascript
 import "./my-module.js";
@@ -247,7 +247,7 @@ import "./my-module.js";
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Default exports
+<!-- # Default exports -->
 - default exports are really handy. For instance, a library like JQuery might have a default export of jQuery or $, which we’d probably also import under the name $ or jQuery.
 
 ```javascript
@@ -287,7 +287,7 @@ export default class ZipCodeValidator {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Default exports
+<!-- # Default exports -->
 
 ```javascript
 export default class ZipCodeValidator {
@@ -345,7 +345,7 @@ strings.forEach(s =&gt; {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Default exports
+<!-- # Default exports -->
 - default exports can also be just values:
 - default exports can also be just values:
 
@@ -448,7 +448,7 @@ strings.forEach(s =&gt; {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Code Generation for Modules
+<!-- # Code Generation for Modules -->
 - This simple example shows how the names used during importing and exporting get translated into the module loading code.
 - This simple example shows how the names used during importing and exporting get translated into the module loading code.
 
@@ -484,7 +484,7 @@ define(["require", "exports", "./mod"], function (require, exports, mod_1) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Code Generation for Modules
+<!-- # Code Generation for Modules -->
 
 ```javascript
 var mod_1 = require("./mod");
@@ -518,7 +518,7 @@ exports.t = mod_1.something + 1;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Code Generation for Modules
+<!-- # Code Generation for Modules -->
 
 ```javascript
 (function (factory) {
@@ -574,7 +574,7 @@ System.register(["./mod"], function(exports_1) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Code Generation for Modules
+<!-- # Code Generation for Modules -->
 
 ```javascript
 import { something } from "./mod";
@@ -605,7 +605,7 @@ tsc --module commonjs Test.ts
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Simple Example
+<!-- # Simple Example -->
 - When compiled, each module will become a separate .js file. As with reference tags, the compiler will follow import statements to compile dependent files.
 
 ```javascript
@@ -654,7 +654,7 @@ export class LettersOnlyValidator implements StringValidator {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Simple Example
+<!-- # Simple Example -->
 
 ```javascript
 import { StringValidator } from "./Validation";
@@ -722,12 +722,12 @@ strings.forEach(s =&gt; {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Optional Module Loading and Other Advanced Loading Scenarios
+<!-- # Optional Module Loading and Other Advanced Loading Scenarios -->
 - The core idea of the pattern is that the import id = require("...") statement gives us access to the types exposed by the module. The module loader is invoked (through require) dynamically, as shown in the if blocks below. This leverages the reference-elision optimization so that the module is only loaded when needed. For this pattern to work, it’s important that the symbol defined via an import is only used in type positions (i.e. never in a position that would be emitted into the JavaScript).
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Optional Module Loading and Other Advanced Loading Scenarios
+<!-- # Optional Module Loading and Other Advanced Loading Scenarios -->
 - To maintain type safety, we can use the typeof keyword. The typeof keyword, when used in a type position, produces the type of a value, in this case the type of the module.
 - To maintain type safety, we can use the typeof keyword. The typeof keyword, when used in a type position, produces the type of a value, in this case the type of the module.
 
@@ -747,7 +747,7 @@ if (needZipValidation) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Optional Module Loading and Other Advanced Loading Scenarios
+<!-- # Optional Module Loading and Other Advanced Loading Scenarios -->
 
 ```javascript
 declare function require(moduleName: string): any;
@@ -780,7 +780,7 @@ if (needZipValidation) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Optional Module Loading and Other Advanced Loading Scenarios
+<!-- # Optional Module Loading and Other Advanced Loading Scenarios -->
 
 ```javascript
 declare function require(moduleNames: string[], onLoad: (...args: any[]) =&gt; void): void;
@@ -829,7 +829,7 @@ if (needZipValidation) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Other JavaScript Libraries
+<!-- # Working with Other JavaScript Libraries -->
 - In Node.js, most tasks are accomplished by loading one or more modules. We could define each module in its own .d.ts file with top-level export declarations, but it’s more convenient to write them as one larger .d.ts file. To do so, we use a construct similar to ambient namespaces, but we use the module keyword and the quoted name of the module which will be available to a later import. For example:
 
 ```javascript
@@ -854,13 +854,117 @@ declare module "path" {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Working with Other JavaScript Libraries
+<!-- # Working with Other JavaScript Libraries -->
 - Now we can /// &lt;reference&gt; node.d.ts and then load the modules using import url = require("url");.
 
 ```javascript
 /// &lt;reference path="node.d.ts"/&gt;
 import * as URL from "url";
 let myUrl = URL.parse("http://www.typescriptlang.org");
+
+```
+
+
+```javascript
+/// &lt;reference path="node.d.ts"/&gt;
+import * as URL from "url";
+let myUrl = URL.parse("http://www.typescriptlang.org");
+
+```
+
+- If you don’t want to take the time to write out declarations before using a new module, you can use a shorthand declaration to get started quickly.
+
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Working with Other JavaScript Libraries -->
+- If you don’t want to take the time to write out declarations before using a new module, you can use a shorthand declaration to get started quickly.
+
+```javascript
+declare module "hot-new-module";
+
+```
+
+- All imports from a shorthand module will have the any type.
+
+```javascript
+import x, {y} from "hot-new-module";
+x(y);
+
+```
+
+
+```javascript
+import x, {y} from "hot-new-module";
+x(y);
+
+```
+
+- Some module loaders such as SystemJS and AMD allow non-JavaScript content to be imported. These typically use a prefix or suffix to indicate the special loading semantics. Wildcard module declarations can be used to cover these cases.
+
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Working with Other JavaScript Libraries -->
+
+```javascript
+declare module "*!text" {
+    const content: string;
+    export default content;
+}
+// Some do it the other way around.
+declare module "json!*" {
+    const value: any;
+    export default value;
+}
+
+```
+
+- Now you can import things that match "*!text" or "json!*".
+
+```javascript
+import fileContent from "./xyz.txt!text";
+import data from "json!http://example.com/data.json";
+console.log(data, fileContent);
+
+```
+
+
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Working with Other JavaScript Libraries -->
+
+```javascript
+import fileContent from "./xyz.txt!text";
+import data from "json!http://example.com/data.json";
+console.log(data, fileContent);
+
+```
+
+- Some libraries are designed to be used in many module loaders, or with no module loading (global variables). These are known as UMD or Isomorphic modules. These libraries can be accessed through either an import or a global variable. For example:
+- Some libraries are designed to be used in many module loaders, or with no module loading (global variables). These are known as UMD or Isomorphic modules. These libraries can be accessed through either an import or a global variable. For example:
+
+```javascript
+export const isPrime(x: number): boolean;
+export as namespace mathLib;
+
+```
+
+- The library can then be used as an import within modules:
+
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Working with Other JavaScript Libraries -->
+
+```javascript
+import { isPrime } from "math-lib";
+isPrime(2);
+mathLib.isPrime(2); // ERROR: can't use the global definition from inside a module
+
+```
+
+- It can also be used as a global variable, but only inside of a script. (A script is a file with no imports or exports.)
+
+```javascript
+mathLib.isPrime(2);
 
 ```
 
@@ -877,9 +981,7 @@ let myUrl = URL.parse("http://www.typescriptlang.org");
 # Guidance for structuring modules
 
 ```javascript
-/// &lt;reference path="node.d.ts"/&gt;
-import * as URL from "url";
-let myUrl = URL.parse("http://www.typescriptlang.org");
+mathLib.isPrime(2);
 
 ```
 
@@ -888,14 +990,14 @@ let myUrl = URL.parse("http://www.typescriptlang.org");
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 - Static methods on an exported class have a similar problem - the class itself adds a layer of nesting. Unless it increases expressivity or intent in a clearly useful way, consider simply exporting a helper function.
 - Static methods on an exported class have a similar problem - the class itself adds a layer of nesting. Unless it increases expressivity or intent in a clearly useful way, consider simply exporting a helper function.
 - Just as “exporting near the top-level” reduces friction on your module’s consumers, so does introducing a default export. If a module’s primary purpose is to house one specific export, then you should consider exporting it as a default export. This makes both importing and actually using the import a little easier. For example:
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 - Just as “exporting near the top-level” reduces friction on your module’s consumers, so does introducing a default export. If a module’s primary purpose is to house one specific export, then you should consider exporting it as a default export. This makes both importing and actually using the import a little easier. For example:
 
 ```javascript
@@ -938,7 +1040,7 @@ console.log(f());
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 - This is optimal for consumers. They can name your type whatever they want (t in this case) and don’t have to do any excessive dotting to find your objects.
 - This is optimal for consumers. They can name your type whatever they want (t in this case) and don’t have to do any excessive dotting to find your objects.
 
@@ -970,7 +1072,7 @@ let y = someFunc();
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 
 ```javascript
 import { SomeType, someFunc } from "./MyThings";
@@ -1015,7 +1117,7 @@ let x = new myLargeModule.Dog();
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 - Consider a simple calculator implementation defined in module Calculator.ts. The module also exports a helper function to test the calculator functionality by passing a list of input strings and writing the result at the end.
 - Consider a simple calculator implementation defined in module Calculator.ts. The module also exports a helper function to test the calculator functionality by passing a list of input strings and writing the result at the end.
 
@@ -1097,7 +1199,7 @@ export function test(c: Calculator, input: string) {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 - Here is a simple test for the calculator using the exposed test function.
 - Here is a simple test for the calculator using the exposed test function.
 
@@ -1144,7 +1246,7 @@ export { test } from "./Calculator";
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 - The new module ProgrammerCalculator exports an API shape similar to that of the original Calculator module, but does not augment any objects in the original module. Here is a test for our ProgrammerCalculator class:
 - The new module ProgrammerCalculator exports an API shape similar to that of the original Calculator module, but does not augment any objects in the original module. Here is a test for our ProgrammerCalculator class:
 
@@ -1159,7 +1261,7 @@ test(c, "001+010="); // prints 3
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 
 ```javascript
 import { Calculator, test } from "./ProgrammerCalculator";
@@ -1174,12 +1276,12 @@ test(c, "001+010="); // prints 3
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 - Namespaces are important to avoid naming collisions in the global scope. For example, you might have My.Application.Customer.AddForm and My.Application.Order.AddForm – two types with the same name, but a different namespace. This, however, is not an issue with modules. Within a module, there’s no plausible reason to have two objects with the same name. From the consumption side, the consumer of any given module gets to pick the name that they will use to refer to the module, so accidental naming conflicts are impossible.
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Guidance for structuring modules
+<!-- # Guidance for structuring modules -->
 - Namespaces are important to avoid naming collisions in the global scope. For example, you might have My.Application.Customer.AddForm and My.Application.Order.AddForm – two types with the same name, but a different namespace. This, however, is not an issue with modules. Within a module, there’s no plausible reason to have two objects with the same name. From the consumption side, the consumer of any given module gets to pick the name that they will use to refer to the module, so accidental naming conflicts are impossible.
 - Namespaces are important to avoid naming collisions in the global scope. For example, you might have My.Application.Customer.AddForm and My.Application.Order.AddForm – two types with the same name, but a different namespace. This, however, is not an issue with modules. Within a module, there’s no plausible reason to have two objects with the same name. From the consumption side, the consumer of any given module gets to pick the name that they will use to refer to the module, so accidental naming conflicts are impossible.
 - All of the following are red flags for module structuring. Double-check that you’re not trying to namespace your external modules if any of these apply to your files:

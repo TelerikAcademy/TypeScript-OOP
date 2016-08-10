@@ -136,7 +136,7 @@ class Activatable {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Understanding the sample
+<!-- # Understanding the sample -->
 - Next, we’ll create the class that will handle the combination of the two mixins. Let’s look at this in more detail to see how it does this:
 
 ```javascript
@@ -148,7 +148,7 @@ class SmartObject implements Disposable, Activatable {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Understanding the sample
+<!-- # Understanding the sample -->
 - To satisfy this requirement, we create stand-in properties and their types for the members that will come from our mixins. This satisfies the compiler that these members will be available at runtime. This lets us still get the benefit of the mixins, albeit with some bookkeeping overhead.
 
 ```javascript
@@ -165,7 +165,7 @@ deactivate: () =&gt; void;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Understanding the sample
+<!-- # Understanding the sample -->
 - Finally, we mix our mixins into the class, creating the full implementation.
 
 ```javascript
@@ -177,7 +177,7 @@ applyMixins(SmartObject, [Disposable, Activatable]);
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Understanding the sample
+<!-- # Understanding the sample -->
 
 ```javascript
 function applyMixins(derivedCtor: any, baseCtors: any[]) {
