@@ -106,6 +106,27 @@ If you have a function with multi-lines body, you must use curly braces **{ }** 
 
 
 
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+# Lambda functions syntax
+- You can define a variable which is of type `function` using the following syntax:
+
+```javascript
+var funcVariable: (year:string) => string;
+```
+
+- And later use it:
+
+```javascript
+funcVariable = function(year:string) {
+    return 'The year is ${year}';
+}
+
+console.log(funcVariable('2016'));
+```
+
+
+
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style: 'font-size: 0.8em'} -->
 # Lambda functions
 A side benefit of using arrow functions is how they handle the often confusing `this` variable.  
