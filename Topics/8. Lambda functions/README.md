@@ -118,8 +118,10 @@ var funcVariable: (year:string) => string;
 
 ```javascript
 funcVariable = function(year:string) {
-    return 'The year is ${year}';
+    return `The year is ${year}`;
 }
+// or
+funcVariable = (year:string) => `The year is ${year}`;
 
 console.log(funcVariable('2016'));
 ```
