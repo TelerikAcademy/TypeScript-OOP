@@ -519,20 +519,19 @@ abstract class MovableShape implements IShape, IMovable {
 # Abstract Classes – _Example_
 
 ```typescript
-public abstract class Animal : IComparable<Animal>
-{
-    // Abstract methods
-    public abstract string GetName();
-    public abstract int Speed { get; }
-    // Non-abstract method
-    public override string ToString()
-    {
-        return "I am " + this.GetName();
-    }
-    // Interface method
-    public int CompareTo(Animal other)
-    {
-        return this.Speed.CompareTo(other.Speed);
+abstract class Animal implements IComparable<Animal> {
+    private _speed: number;
+
+    public abstract getName(): string;
+    public abstract get speed(): number;
+
+    compareTo(other: Animal): number {
+        if (this.speed > other.speed) {
+            return 1;
+        } else if (this.speed < other.speed) {
+            return -1;
+        }
+        return 0;
     }
 }
 ```
@@ -543,20 +542,16 @@ public abstract class Animal : IComparable<Animal>
 <!-- # Abstract Classes – _Example_ -->
 
 ```typescript
-public class Turtle : Animal
-{
-    public override int Speed { get { return 1; } }
+class Turtle extends Animal {
+    public get speed(): number { return 10; }
 
-    public override string GetName()
-    { return "turtle"; }
+    public getName(): string { return "Turtle"; }
 }
 
-public class Cheetah : Animal
-{
-    public override int Speed { get { return 100; } }
+class Cheetah extends Animal {
+    public get speed(): number { return 300; }
 
-    public override string GetName()
-    { return "cheetah"; }
+    public getName(): string { return "Cheetah"; }
 }
 ```
 
@@ -588,24 +583,14 @@ public class Cheetah : Animal
     - Other arrows mean some kind of associations
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # UML Class Diagrams - Example -->
-
-<!-- <img showInPresentation="true" class="slide-image" src="imgs/uml.png" style="top:14.34%; left:25%; width:55%; z-index:-1; border-radius: 10px" /> -->
-
-
-<!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Class Diagrams in Visual Studio
-## [Demo]() -->
-
 
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Encapsulation -->
 
-<!-- <img showInPresentation="true" class="slide-image" src="imgs/pic30.png" style="top:40%; left:20.36%; width:40.55%; z-index:-1; border-radius: 10px" /> -->
-<!-- <img showInPresentation="true" class="slide-image" src="imgs/pic31.png" style="top:11.73%; left:73.54%; width:30.04%; z-index:-1; border-radius: 10px" /> -->
+<!-- <img showInPresentation="true" class="slide-image" src="imgs/pic30.png" style="top:40%; left:30%; width:40.55%; z-index:-1; border-radius: 10px" /> -->
+
 
 
 <!-- attr: { id:'encapsulationId', showInPresentation:true, hasScriptWrapper:true } -->
@@ -629,9 +614,8 @@ public class Cheetah : Animal
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Encapsulation in .NET
-- Fields are always declared <code>private</code>
+- Fields are mostly declared as <code>private</code>
   - Accessed through **properties** in read-only or read-write mode
-- Constructors are almost always declared <code>public</code>
 - Interface methods are always <code>public</code>
   - Not explicitly declared with <code>public</code>
 - Non-interface methods are declared <br /> <code>private</code> / <code>protected</code>
@@ -653,15 +637,14 @@ public class Cheetah : Animal
 
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Object-Oriented Programming Fundamental Principles – Part 1
-## Questions? -->
+<!-- # Questions? -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Free Trainings @ Telerik Academy
-- C# Programming @ Telerik Academy
-    - [C# OOP Course](http://academy.telerik.com/student-courses/programming/object-oriented-programming/about)
-  - Telerik Software Academy
+- TypeScript Programming @ Telerik Academy
+    - [TypeScript OOP Course](http://telerikacademy.com/Courses/Courses/Details/393)
+  - Telerik School Academy
     - [academy.telerik.com](typescriptharpfundamentals.telerik.com)
   - Telerik Academy @ Facebook
     - [facebook.com/TelerikAcademy](facebook.com/TelerikAcademy)
