@@ -140,7 +140,7 @@ interface IFigure { draw(): void }
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Inheritance in .NET
+# Inheritance in TypeScript
 - A class can inherit only one base class
   - E.g. <code>IOException</code> derives from <code>SystemException</code> and it derives from <code>Exception</code>
 - A class can implement several interfaces
@@ -507,7 +507,7 @@ class Cheetah extends Animal {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Encapsulation in .NET
+# Encapsulation in TypeScript
 - Fields are mostly declared as <code>private</code>
   - Accessed through **properties** in read-only or read-write mode
 - Interface methods are always <code>public</code>
