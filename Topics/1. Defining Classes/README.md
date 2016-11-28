@@ -182,7 +182,7 @@ r.size = 10; // Compilation error: readonly field
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Access Modifiers
-## Public, Private, Protected, Internal -->
+## Public, Private, Protected -->
 
 
 <!-- <img showInPresentation="true" class="slide-image" src="imgs/pic12.png" style="top:54%; left:34%; width:35%; z-index:-1" /> -->
