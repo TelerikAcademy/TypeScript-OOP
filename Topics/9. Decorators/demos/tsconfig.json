@@ -1,0 +1,11 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "ES5",
+        "watch": true,
+        "module": "amd",
+        "outFile": "app.js",
+        "inlineSourceMap": true,
+        "experimentalDecorators": true
+    }
+}
